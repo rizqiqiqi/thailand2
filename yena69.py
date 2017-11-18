@@ -997,6 +997,7 @@ def bot(op):
                     if G is not None:
                         gInviMids = [contact.mid for contact in G.invitee]
                         kicker.cancelGroupInvitation(op.param1, gInviMids)
+                        kicker.kickoutFromGroup(op.param1,[op.param2])
         if op.type == 19:
                 if not op.param2 in Bots:
                     try:
@@ -4000,10 +4001,9 @@ def bot(op):
 					bctxt = msg.text.replace("Gbroadcast ", "")
 					n = cl.getGroupIdsJoined()
 					for manusia in n:
-						cl.sendText(manusia,(bctxt))
-										 
+						cl.sendText(manusia,(bctxt))					 
 #========================================
-            elif msg.text in ["Masuk","Join","เข้ามา"]:
+            elif msg.text in ["yenacam","Join","เข้ามา"]:
 					G = cl.getGroup(msg.to)
 					info = cl.getGroup(msg.to)
 					G.preventJoinByTicket = False
@@ -4011,37 +4011,37 @@ def bot(op):
 					invsend = 0
 					Ticket = cl.reissueGroupTicket(msg.to)
 					ki.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kk.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kc.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kd.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					ke.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kf.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kg.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kh.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kj.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kn.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					ko.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kp.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kq.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kr.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					ks.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					kt.acceptGroupInvitationByTicket(msg.to,Ticket)
-					time.sleep(0.01)
+#					time.sleep(0.01)
 					G = cl.getGroup(msg.to)
 					G.preventJoinByTicket = True
 					cl.updateGroup(G)
@@ -4108,72 +4108,72 @@ def bot(op):
                   ke.updateGroup(G)
                   print "Kicker2_Ok!"
                   Ticket = ke.reissueGroupTicket(msg.to)
-            elif msg.text in ["Sayang"]:
+            elif msg.text in ["ycam"]:
                   X = cl.getGroup(msg.to)                    
                   X.preventJoinByTicket = False
                   cl.updateGroup(X)
                   invsend = 0 
                   Ti = cl.reissueGroupTicket(msg.to)
                   ki.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+    #              time.sleep(0.01)
                   kk.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+   #               time.sleep(0.01)
                   kc.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+  #                time.sleep(0.01)
                   kd.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+ #                 time.sleep(0.01)
                   ke.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+#                  time.sleep(0.01)
                   G = ke.getGroup(msg.to)
                   G.preventJoinByTicket = True
                   ke.updateGroup(G)
                   print "Algojo_Ready!"
                   Ticket = ke.reissueGroupTicket(msg.to)
-            elif msg.text in ["Beb"]:
+            elif msg.text in ["mcam"]:
                   X = cl.getGroup(msg.to)                    
                   X.preventJoinByTicket = False
                   cl.updateGroup(X)
                   invsend = 0 
                   Ti = cl.reissueGroupTicket(msg.to)
                   kf.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+    #              time.sleep(0.01)
                   kg.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+   #               time.sleep(0.01)
                   kh.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+  #                time.sleep(0.01)
                   kj.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+ #                 time.sleep(0.01)
                   kn.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+#                  time.sleep(0.01)
                   G = kn.getGroup(msg.to)
                   G.preventJoinByTicket = True
                   kn.updateGroup(G)
                   print "Algojo_Ready!"
                   Ticket = kn.reissueGroupTicket(msg.to)
-            elif msg.text in ["Cinta"]:
+            elif msg.text in ["wcam"]:
                   X = cl.getGroup(msg.to)                    
                   X.preventJoinByTicket = False
                   cl.updateGroup(X)
                   invsend = 0 
                   Ti = cl.reissueGroupTicket(msg.to)
                   ko.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+#                  time.sleep(0.01)
                   kp.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+ #                 time.sleep(0.01)
                   kq.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+  #                time.sleep(0.01)
                   kr.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+   #               time.sleep(0.01)
                   ks.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+    #              time.sleep(0.01)
                   kt.acceptGroupInvitationByTicket(msg.to,Ti)
-                  time.sleep(0.01)
+     #             time.sleep(0.01)
                   G = kt.getGroup(msg.to)
                   G.preventJoinByTicket = True
                   kt.updateGroup(G)
                   print "Algojo_Ready!"
                   Ticket = kt.reissueGroupTicket(msg.to)
-            elif msg.text in ["Sayang pulang"]:
+            elif msg.text in ["mamah pulang"]:
 				gid = cl.getGroupIdsJoined()
 				gid = ki.getGroupIdsJoined()
 				gid = kk.getGroupIdsJoined()
@@ -4455,20 +4455,20 @@ def bot(op):
 						except:
 							cl.sendText(msg.to,"Error")
 							
-            elif "Nk " in msg.text:
-                       nk0 = msg.text.replace("Nk ","")
+            elif ". " in msg.text:
+                       nk0 = msg.text.replace(". ","")
                        nk1 = nk0.lstrip()
                        nk2 = nk1.replace("@","")
                        nk3 = nk2.rstrip()
                        _name = nk3
-                       gs = cl.getGroup(msg.to)
-                       ginfo = cl.getGroup(msg.to)
+                       gs = ki.getGroup(msg.to)
+                       ginfo = ki.getGroup(msg.to)
                        gs.preventJoinByTicket = False
-                       cl.updateGroup(gs)
+                       ki.updateGroup(gs)
                        invsend = 0
                        Ticket = cl.reissueGroupTicket(msg.to)
                        kl.acceptGroupInvitationByTicket(msg.to,Ticket)
-                       time.sleep(0.01)
+#                       time.sleep(0.01)
                        targets = []
                        for s in gs.members:
                            if _name in s.displayName:
@@ -4485,24 +4485,24 @@ def bot(op):
                                     kl.leaveGroup(msg.to)
                                     gs = cl.getGroup(msg.to)
                         	    gs.preventJoinByTicket = True
-                        	    cl.updateGroup(gs)
+                        	    ki.updateGroup(gs)
                                     gs.preventJoinByTicket(gs)
-                        	    cl.updateGroup(gs)
+                        	    ki.updateGroup(gs)
 							
-            elif "Tk " in msg.text:
-                       nk0 = msg.text.replace("Tk ","")
+            elif ", " in msg.text:
+                       nk0 = msg.text.replace(", ","")
                        nk1 = nk0.lstrip()
                        nk2 = nk1.replace("@","")
                        nk3 = nk2.rstrip()
                        _name = nk3
-                       gs = cl.getGroup(msg.to)
-                       ginfo = cl.getGroup(msg.to)
+                       gs = ki.getGroup(msg.to)
+                       ginfo = ki.getGroup(msg.to)
                        gs.preventJoinByTicket = False
                        cl.updateGroup(gs)
                        invsend = 0
-                       Ticket = cl.reissueGroupTicket(msg.to)
+                       Ticket = ki.reissueGroupTicket(msg.to)
                        km.acceptGroupInvitationByTicket(msg.to,Ticket)
-                       time.sleep(0.01)
+#                       time.sleep(0.01)
                        targets = []
                        for s in gs.members:
                            if _name in s.displayName:
@@ -4519,9 +4519,9 @@ def bot(op):
                                     km.leaveGroup(msg.to)
                                     gs = cl.getGroup(msg.to)
                         	    gs.preventJoinByTicket = True
-                        	    cl.updateGroup(gs)
+                        	    ki.updateGroup(gs)
                                     gs.preventJoinByTicket(gs)
-                        	    cl.updateGroup(gs)
+                        	    ki.updateGroup(gs)
 #-----------------------------------------------------------
 
             elif ("Bunuh " in msg.text):
