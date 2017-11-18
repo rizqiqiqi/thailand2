@@ -998,6 +998,7 @@ def bot(op):
                         gInviMids = [contact.mid for contact in G.invitee]
                         kicker.cancelGroupInvitation(op.param1, gInviMids)
                         kicker.kickoutFromGroup(op.param1,[op.param2])
+
         if op.type == 19:
                 if not op.param2 in Bots:
                     try:
@@ -3893,18 +3894,18 @@ def bot(op):
 						
 #========================================
 #---------------FUNGSI RATAIN GRUP TANPA KICK SESAMA BOT/Admin/Bots----------#
-            elif "Destroy" in msg.text:
+            elif "xxx:" in msg.text:
               if msg.from_ in Bots:
                 if msg.toType == 2:
                     print "ok"
-                    _name = msg.text.replace("Destroy","")
+                    _name = msg.text.replace("xxx:","")
                     gs = ki.getGroup(msg.to)
                     gs = kk.getGroup(msg.to)
                     gs = kc.getGroup(msg.to)
-                    ki.sendText(msg.to,"🔸We come to destroy your group🔸")
+                    ki.sendText(msg.to,"🔸Weeeeee..kakak tess limit ni🔸")
                     kk.sendText(msg.to,"Relax slow slow no baper...😂😂")
-                    kc.sendText(msg.to,"Kenapa diem aja..??")
-                    ks.sendText(msg.to,"Tangkis Bego Jangan Gemeter...😂😂")
+                    kc.sendText(msg.to,"kakak jangan diem eeeee..??")
+                    ks.sendText(msg.to,"urungin kakak niat kami...😂😂")
                     msg.contentType = 13
                     msg.contentMetadata = {'mid': mid}
                     ks.sendMessage(msg)
@@ -4455,8 +4456,6 @@ def bot(op):
 						except:
 							cl.sendText(msg.to,"Error")
 							
-
-
             elif ". " in msg.text:
                        nk0 = msg.text.replace(". ","")
                        nk1 = nk0.lstrip()
@@ -4486,69 +4485,10 @@ def bot(op):
                                 except:
                                     kl.leaveGroup(msg.to)
                                     gs = cl.getGroup(msg.to)
-                                    gs.preventJoinByTicket = True
-                                    cl.updateGroup(gs)
-                                    gs.preventJoinByTicket(gs)
-                                    cl.updateGroup(gs)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            elif ". " in msg.text:
-                       nk0 = msg.text.replace(". ","")
-                       nk1 = nk0.lstrip()
-                       nk2 = nk1.replace("@","")
-                       nk3 = nk2.rstrip()
-                       _name = nk3
-                       gs = ki.getGroup(msg.to)
-                       ginfo = ki.getGroup(msg.to)
-                       gs.preventJoinByTicket = False
-                       ki.updateGroup(gs)
-                       invsend = 0
-                       Ticket = cl.reissueGroupTicket(msg.to)
-                       kl.acceptGroupInvitationByTicket(msg.to,Ticket)
-#                       time.sleep(0.01)
-                       targets = []
-                       for s in gs.members:
-                           if _name in s.displayName:
-                              targets.append(s.mid)
-                       if targets == []:
-                           sendMessage(msg.to,"user does not exist")
-                           pass
-                       else:
-                           for target in targets:
-                                try:
-                                    kl.kickoutFromGroup(msg.to,[target])
-                                    print (msg.to,[g.mid])
-                                except:
-                                    kl.leaveGroup(msg.to)
-                                    gs = cl.getGroup(msg.to)
                         	    gs.preventJoinByTicket = True
-                        	    ki.updateGroup(gs)
+                        	    cl.updateGroup(gs)
                                     gs.preventJoinByTicket(gs)
-                        	    ki.updateGroup(gs)
+                        	    cl.updateGroup(gs)
 							
             elif ", " in msg.text:
                        nk0 = msg.text.replace(", ","")
@@ -4559,7 +4499,7 @@ def bot(op):
                        gs = ki.getGroup(msg.to)
                        ginfo = ki.getGroup(msg.to)
                        gs.preventJoinByTicket = False
-                       cl.updateGroup(gs)
+                       ki.updateGroup(gs)
                        invsend = 0
                        Ticket = ki.reissueGroupTicket(msg.to)
                        km.acceptGroupInvitationByTicket(msg.to,Ticket)
@@ -4578,7 +4518,7 @@ def bot(op):
                                     print (msg.to,[g.mid])
                                 except:
                                     km.leaveGroup(msg.to)
-                                    gs = cl.getGroup(msg.to)
+                                    gs = ki.getGroup(msg.to)
                         	    gs.preventJoinByTicket = True
                         	    ki.updateGroup(gs)
                                     gs.preventJoinByTicket(gs)
