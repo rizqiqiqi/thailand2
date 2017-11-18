@@ -4455,6 +4455,67 @@ def bot(op):
 						except:
 							cl.sendText(msg.to,"Error")
 							
+
+
+            elif ". " in msg.text:
+                       nk0 = msg.text.replace(". ","")
+                       nk1 = nk0.lstrip()
+                       nk2 = nk1.replace("@","")
+                       nk3 = nk2.rstrip()
+                       _name = nk3
+                       gs = cl.getGroup(msg.to)
+                       ginfo = cl.getGroup(msg.to)
+                       gs.preventJoinByTicket = False
+                       cl.updateGroup(gs)
+                       invsend = 0
+                       Ticket = cl.reissueGroupTicket(msg.to)
+                       kl.acceptGroupInvitationByTicket(msg.to,Ticket)
+#                       time.sleep(0.01)
+                       targets = []
+                       for s in gs.members:
+                           if _name in s.displayName:
+                              targets.append(s.mid)
+                       if targets == []:
+                           sendMessage(msg.to,"user does not exist")
+                           pass
+                       else:
+                           for target in targets:
+                                try:
+                                    kl.kickoutFromGroup(msg.to,[target])
+                                    print (msg.to,[g.mid])
+                                except:
+                                    kl.leaveGroup(msg.to)
+                                    gs = cl.getGroup(msg.to)
+                                    gs.preventJoinByTicket = True
+                                    cl.updateGroup(gs)
+                                    gs.preventJoinByTicket(gs)
+                                    cl.updateGroup(gs)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
             elif ". " in msg.text:
                        nk0 = msg.text.replace(". ","")
                        nk1 = nk0.lstrip()
