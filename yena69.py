@@ -88,7 +88,7 @@ ks.login(token="EmiBotJ5eCYosunECLPc.cTXHQLZwcjas2Whcxxlhda.SaSmK44Hsu3L/Kqq9L4O
 ks.loginResult()
 
 kt = LINETCR.LINE()
-kt.login(token="Em5d6ztrOIT2UMstWSK4.srjUosW4RgcA0sSjVMH6Ta.pIYl4SiDdsMEWsPazAC32rMkmhhg7MShoqcHuYumuuk=")
+kt.login(token="EmoxVavoTidpdEf3yR14.srjUosW4RgcA0sSjVMH6Ta.thUM0wgSsJHjGWqzrjDHK3ptibY/dbQUB6gJrG6ix1E=")
 kt.loginResult()
 
 print "U.k kalem Bot"
