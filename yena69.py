@@ -11,6 +11,8 @@ import urllib2
 import urllib3
 import tempfile
 import html5lib
+import requests,tempfile
+
 
 cl = LINETCR.LINE()
 cl.login(token="EmozCMcemWY3r0EvVrN9.3UrGMEjECFh9gbFk6EFekq.rI/9MvftNzFmnqSTqz1rLv++4xQRYyK5a79m4mC642o=")
@@ -88,7 +90,7 @@ ks.login(token="EmiBotJ5eCYosunECLPc.cTXHQLZwcjas2Whcxxlhda.SaSmK44Hsu3L/Kqq9L4O
 ks.loginResult()
 
 kt = LINETCR.LINE()
-kt.login(token="EmoxVavoTidpdEf3yR14.srjUosW4RgcA0sSjVMH6Ta.thUM0wgSsJHjGWqzrjDHK3ptibY/dbQUB6gJrG6ix1E=")
+kt.login(token="EmjWyN1cuuTboaWx8md4.srjUosW4RgcA0sSjVMH6Ta.cFLNFlgmUGTNufuPaBNk0ETp8smeVS4+MT0IxZFxZxk=")
 kt.loginResult()
 
 print "U.k kalem Bot"
@@ -965,6 +967,8 @@ def bot(op):
                     kicker = random.choice(klist) 
                     G = kicker.getGroup(op.param1)
                     G.preventJoinByTicket = True
+                    kicker.updateGroup(G)
+                    kicker.kickoutFromGroup(op.param1,[op.param2])
                     kicker.updateGroup(G)
                 except Exception, e:
                     print e
