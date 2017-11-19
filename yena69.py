@@ -997,8 +997,6 @@ def bot(op):
                     if G is not None:
                         gInviMids = [contact.mid for contact in G.invitee]
                         kicker.cancelGroupInvitation(op.param1, gInviMids)
-                        kicker.kickoutFromGroup(op.param1,[op.param2])
-
         if op.type == 19:
                 if not op.param2 in Bots:
                     try:
